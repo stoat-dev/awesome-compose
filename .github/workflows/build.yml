@@ -1,0 +1,17 @@
+name: "Build"
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Stoat Action
+      uses: stoat-dev/stoat-action@v0
+      if: always()

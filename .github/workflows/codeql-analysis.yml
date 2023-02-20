@@ -28,3 +28,8 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+
+    - name: Run Stoat Action
+      uses: stoat-dev/stoat-action@v0
+      if: always()
+
